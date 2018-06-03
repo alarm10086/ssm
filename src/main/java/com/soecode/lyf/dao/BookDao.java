@@ -1,12 +1,12 @@
 package com.soecode.lyf.dao;
 
-import java.util.Date;
-import java.util.List;
-
-import org.apache.ibatis.annotations.*;
-
 import com.soecode.lyf.entity.Book;
-import org.springframework.stereotype.Component;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.ResultType;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
+
+import java.util.List;
 
 public interface BookDao {
 

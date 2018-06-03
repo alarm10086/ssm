@@ -1,12 +1,10 @@
 package com.soecode.lyf.dao;
 
+import com.soecode.lyf.entity.Appointment;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
-
-import com.soecode.lyf.entity.Appointment;
 import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Component;
 
 public interface AppointmentDao {
 
@@ -36,6 +34,7 @@ public interface AppointmentDao {
             " WHERE a.book_id = #{bookId} " +
             " AND a.student_id = #{studentId}")
     @ResultType(Appointment.class)
-    Appointment queryByKeyWithBook(@Param("bookId") long bookId, @Param("studentId") long studentId);
+    Appointment queryByKeyWithBook(@Param("bookId") long bookId,
+            @Param("studentId") long studentId);
 
 }

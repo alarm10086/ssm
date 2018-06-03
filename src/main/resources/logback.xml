@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-	<appender name="STDOUT" class="ch.qos.logback.ext.spring.DelegatingLogbackAppender"/>
+    <appender name="STDOUT" class="ch.qos.logback.ext.spring.DelegatingLogbackAppender"/>
 
-	<root level="debug">
-		<appender-ref ref="STDOUT" />
-	</root>
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+    </root>
 </configuration>

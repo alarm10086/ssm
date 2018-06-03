@@ -22,16 +22,16 @@ public class LogbackConfig {
     }
 
     @Bean(initMethod = "start", destroyMethod = "stop")
-    public static PatternLayoutEncoder encoder(LoggerContext ctx) {
-        PatternLayoutEncoder encoder = new PatternLayoutEncoder();
+    public static PatternLayoutEncoder encoder(final LoggerContext ctx) {
+        final PatternLayoutEncoder encoder = new PatternLayoutEncoder();
         encoder.setContext(ctx);
         encoder.setPattern("%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n");
         return encoder;
     }
 
     @Bean(initMethod = "start", destroyMethod = "stop")
-    public static ConsoleAppender STDOUT(LoggerContext ctx, PatternLayoutEncoder encoder) {
-        ConsoleAppender appender = new ConsoleAppender();
+    public static ConsoleAppender STDOUT(final LoggerContext ctx, final PatternLayoutEncoder encoder) {
+        final ConsoleAppender appender = new ConsoleAppender();
         appender.setContext(ctx);
         appender.setEncoder(encoder);
         return appender;

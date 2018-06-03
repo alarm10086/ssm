@@ -1,9 +1,7 @@
 package com.soecode.lyf;
 
-import com.soecode.lyf.config.DaoConfig;
 import com.soecode.lyf.config.RootConfig;
-import com.soecode.lyf.config.ServiceConfig;
-import com.soecode.lyf.config.WebConfig;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
@@ -15,9 +13,11 @@ import org.springframework.test.context.web.WebAppConfiguration;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 // 告诉junit spring配置文件
-@ContextConfiguration(classes = {RootConfig.class})
+@ContextConfiguration(classes = { RootConfig.class })
 @TestPropertySource("classpath:jdbc.properties")
 @WebAppConfiguration
 public class BaseTest {
-
+    @Test
+    public void test() {
+    }
 }

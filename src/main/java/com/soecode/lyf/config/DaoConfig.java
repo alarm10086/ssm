@@ -35,7 +35,7 @@ public class DaoConfig {
 
     @Bean
     public DataSource dataSource() throws PropertyVetoException {
-        ComboPooledDataSource dataSource = new ComboPooledDataSource();
+        final ComboPooledDataSource dataSource = new ComboPooledDataSource();
         dataSource.setDriverClass(driver);
         dataSource.setJdbcUrl(url);
         dataSource.setUser(username);
@@ -49,12 +49,12 @@ public class DaoConfig {
     }
 
     @Bean
-    public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource) {
-        Properties properties = new Properties();
+    public SqlSessionFactoryBean sqlSessionFactoryBean(final DataSource dataSource) {
+        final Properties properties = new Properties();
         properties.put("useGeneratedKeys", true);
         properties.put("useColumnLabel", true);
         properties.put("mapUnderscoreToCamelCase", true);
-        SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
+        final SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setTypeAliasesPackage("com.soecode.lyf.entity");
         bean.setConfigurationProperties(properties);
         bean.setDataSource(dataSource);
@@ -62,15 +62,16 @@ public class DaoConfig {
     }
 
     @Bean
-    public MapperFactoryBean<BookDao> bookDaoMapper(SqlSessionFactory factory) {
-        MapperFactoryBean<BookDao> bean = new MapperFactoryBean<>(BookDao.class);
+    public MapperFactoryBean<BookDao> bookDaoMapper(final SqlSessionFactory factory) {
+        final MapperFactoryBean<BookDao> bean = new MapperFactoryBean<>(BookDao.class);
         bean.setSqlSessionFactory(factory);
         return bean;
     }
 
     @Bean
-    public MapperFactoryBean<AppointmentDao> appointmentDaoMapperFactoryBean(SqlSessionFactory factory) {
-        MapperFactoryBean<AppointmentDao> bean = new MapperFactoryBean<>(AppointmentDao.class);
+    public MapperFactoryBean<AppointmentDao> appointmentDaoMapperFactoryBean(
+            final SqlSessionFactory factory) {
+        final MapperFactoryBean<AppointmentDao> bean = new MapperFactoryBean<>(AppointmentDao.class);
         bean.setSqlSessionFactory(factory);
         return bean;
     }
