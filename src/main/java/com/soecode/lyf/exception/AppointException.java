@@ -5,12 +5,12 @@ package com.soecode.lyf.exception;
  */
 public class AppointException extends RuntimeException {
 
-	public AppointException(String message) {
-		super(message);
-	}
+    public AppointException(final String message) {
+        super(message);
+    }
 
-	public AppointException(String message, Throwable cause) {
-		super(message, cause);
-	}
+    public AppointException(final String message, final Throwable cause) {
+        super(message, cause);
+    }
 
 }

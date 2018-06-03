@@ -5,12 +5,12 @@ package com.soecode.lyf.exception;
  */
 public class RepeatAppointException extends RuntimeException {
 
-	public RepeatAppointException(String message) {
-		super(message);
-	}
+    public RepeatAppointException(final String message) {
+        super(message);
+    }
 
-	public RepeatAppointException(String message, Throwable cause) {
-		super(message, cause);
-	}
+    public RepeatAppointException(final String message, final Throwable cause) {
+        super(message, cause);
+    }
 
 }

@@ -7,9 +7,9 @@ import org.springframework.web.context.WebApplicationContext;
 
 @WebAppConfiguration
 @ContextConfiguration({ "classpath:spring/spring-web.xml", "classpath:spring/spring-service.xml",
-		"classpath:spring/spring-dao.xml" })
+        "classpath:spring/spring-dao.xml" })
 public class AbstractContextControllerTests {
 
-	@Autowired
-	protected WebApplicationContext wac;
+    @Autowired
+    protected WebApplicationContext wac;
 }
