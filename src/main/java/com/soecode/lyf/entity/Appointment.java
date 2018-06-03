@@ -7,66 +7,71 @@ import java.util.Date;
  */
 public class Appointment {
 
-	private long bookId;// 图书ID
+    /** 图书ID */
+    private long bookId;
 
-	private long studentId;// 学号
+    /** 学号 */
+    private long studentId;
 
-	private Date appointTime;// 预约时间
+    /** 预约时间 */
+    private Date appointTime;
 
-	// 多对一的复合属性
-	private Book book;// 图书实体
+    /** 图书实体（多对一的复合属性） */
+    private Book book;
 
-	public Appointment() {
-	}
+    public Appointment() {
+    }
 
-	public Appointment(long bookId, long studentId, Date appointTime) {
-		this.bookId = bookId;
-		this.studentId = studentId;
-		this.appointTime = appointTime;
-	}
+    public Appointment(final long bookId, final long studentId, final Date appointTime) {
+        this.bookId = bookId;
+        this.studentId = studentId;
+        this.appointTime = appointTime;
+    }
 
-	public Appointment(long bookId, long studentId, Date appointTime, Book book) {
-		this.bookId = bookId;
-		this.studentId = studentId;
-		this.appointTime = appointTime;
-		this.book = book;
-	}
+    public Appointment(final long bookId, final long studentId, final Date appointTime,
+            final Book book) {
+        this.bookId = bookId;
+        this.studentId = studentId;
+        this.appointTime = appointTime;
+        this.book = book;
+    }
 
-	public long getBookId() {
-		return bookId;
-	}
+    public long getBookId() {
+        return bookId;
+    }
 
-	public void setBookId(long bookId) {
-		this.bookId = bookId;
-	}
+    public void setBookId(final long bookId) {
+        this.bookId = bookId;
+    }
 
-	public long getStudentId() {
-		return studentId;
-	}
+    public long getStudentId() {
+        return studentId;
+    }
 
-	public void setStudentId(long studentId) {
-		this.studentId = studentId;
-	}
+    public void setStudentId(final long studentId) {
+        this.studentId = studentId;
+    }
 
-	public Date getAppointTime() {
-		return appointTime;
-	}
+    public Date getAppointTime() {
+        return appointTime;
+    }
 
-	public void setAppointTime(Date appointTime) {
-		this.appointTime = appointTime;
-	}
+    public void setAppointTime(final Date appointTime) {
+        this.appointTime = appointTime;
+    }
 
-	public Book getBook() {
-		return book;
-	}
+    public Book getBook() {
+        return book;
+    }
 
-	public void setBook(Book book) {
-		this.book = book;
-	}
+    public void setBook(final Book book) {
+        this.book = book;
+    }
 
-	@Override
-	public String toString() {
-		return "Appointment [bookId=" + bookId + ", studentId=" + studentId + ", appointTime=" + appointTime + "]";
-	}
+    @Override
+    public String toString() {
+        return "Appointment [bookId=" + bookId + ", studentId=" + studentId + ", appointTime=" +
+                appointTime + "]";
+    }
 
 }
