@@ -14,7 +14,7 @@ public enum AppointStateEnum {
 
     private final String stateInfo;
 
-    private AppointStateEnum(final int state, final String stateInfo) {
+    AppointStateEnum(final int state, final String stateInfo) {
         this.state = state;
         this.stateInfo = stateInfo;
     }
