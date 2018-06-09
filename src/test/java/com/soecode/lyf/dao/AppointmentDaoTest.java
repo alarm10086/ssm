@@ -11,15 +11,19 @@ public class AppointmentDaoTest extends BaseTest {
     private AppointmentDao appointmentDao;
 
     @Test
-    public void testInsertAppointment() throws Exception {
+    public void testAppointmentDao() throws Exception {
+        testInsertAppointment();
+        testQueryByKeyWithBook();
+    }
+
+    private void testInsertAppointment() throws Exception {
         final long bookId = 1000;
         final long studentId = 12345678910L;
         final int insert = appointmentDao.insertAppointment(bookId, studentId);
         System.out.println("insert=" + insert);
     }
 
-    @Test
-    public void testQueryByKeyWithBook() throws Exception {
+    private void testQueryByKeyWithBook() throws Exception {
         final long bookId = 1000;
         final long studentId = 12345678910L;
         final Appointment appointment = appointmentDao.queryByKeyWithBook(bookId, studentId);
