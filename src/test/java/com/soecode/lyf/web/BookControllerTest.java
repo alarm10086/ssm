@@ -23,10 +23,6 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppC
  *
  * @author Kemin
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-// 配置事务的回滚,对数据库的增删改都会回滚,便于测试用例的循环利用
-@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
-@Transactional
 public class BookControllerTest extends AbstractContextControllerTests {
 
     private MockMvc mockMvc;
